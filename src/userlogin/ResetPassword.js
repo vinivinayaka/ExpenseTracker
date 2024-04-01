@@ -25,16 +25,16 @@ const handleSubmit=(e)=>{
   
 }
 return(
-    <div class="container">
+    <div className="containers_1">
       <h1 class="reset">Reset Password</h1>
       <div class="resetPassword">
-    <form onSubmit={handleSubmit}>
-    <label for="Password">New Password</label>
-    <input type="password" id="Password" name="Password" size="30"autoComplete="off" placeholder='Password' onChange={(e)=>setPassword(e.target.value)}></input>
-    <label for="Password">Confirm Password</label>
-    <input type="password" id="confirmPassword" placeholder="Re-enter password"name="email"required autoComplete="off" onChange={(e) => setConfirmPassword(e.target.value)}></input>
+    <form className='loginForm' onSubmit={handleSubmit}>
+    <label className='label_log' for="Password">New Password</label>
+    <input className='inputs_data' type="password" id="Password" name="Password" size="30"autoComplete="off" placeholder='Password' onChange={(e)=>setPassword(e.target.value)}></input>
+    <label className='label_log' for="Password">Confirm Password</label>
+    <input className='inputs_data' type="password" id="confirmPassword" placeholder="Re-enter password"name="email"required autoComplete="off" onChange={(e) => setConfirmPassword(e.target.value)}></input>
                 
-    <button type="submit" id="SignIN">Update</button>
+    <button className="Logbutton" type="submit" id="SignIN">Update</button>
     </form>
     </div>
    

@@ -15,7 +15,7 @@ const RemainingBudget = () => {
 	return (
 	
 		<div>
-            <div className={`alert p-4 ${alertType}`}>
+            <div className={`alert p-4 ${alertType}` }  >
                 <span>Remaining:₹{remainingAmount}</span>
             </div>
             {remainingAmount < 200 && (

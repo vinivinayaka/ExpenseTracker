@@ -1,49 +1,3 @@
-// import React, {  useEffect, useState } from "react";
-// import AdminHome from "./AdminHome";
-
-// import Home from "./Home";
-// // import "./Login.css"
-// export default function UserDetail() {
-//   const [userData, setUserData] = useState("");
-//   const [admin, setAdmin] = useState(false);
-
-//   useEffect(() => {
-//     fetch("http://localhost:3050/userData", {
-//       method: "POST",
-//       crossDomain: true,
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json",
-//         "Access-Control-Allow-Origin": "*",
-//       },
-//       body: JSON.stringify({
-//         token: window.localStorage.getItem("token"),
-//       }),
-//     })
-//       .then((res) => res.json())
-//       .then((data) => {
-//         console.log(data, "userData");
-//         if (data.data.userType === "Admin") {
-//           setAdmin(true);
-//         }
-
-//         setUserData(data.data);
-
-//         if (data.data === "token expired") {
-//           alert("Token expired login again");
-//           window.localStorage.clear();
-//           window.location.href = "./Login";
-//         }
-//       });
-//   }, []);
-
-//   return admin ? <AdminHome /> : <Home userData={userData} />;
-// }
-
-
-
-
-
 
 import React, { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";
@@ -128,16 +82,16 @@ function UpdateUser() {
 
 
       First Name<br/>
-           <input  placeholder="Email" className="form-control" 
+           <input  className='inputs_data' placeholder="Email" 
                  defaultValue={Email}
                  onChange={(e) => setEmail(e.target.value)}/><br/>
                  last Name<br/>
-                <input  placeholder="Pasword" className="form-control" 
+                <input  className='inputs_data' placeholder="Pasword"
                  defaultValue={Password}
                  onChange={(e) => setPassword(e.target.value)}/><br/>
                 Email<br/>
                
-                 <button onClick={updateData}>Update</button>
+                 <button className="Logbutton" onClick={updateData}>Update</button>
 
 
       {/* {message && <p>{message}</p>} */}

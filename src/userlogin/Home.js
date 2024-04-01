@@ -53,7 +53,7 @@ export default function Home() {
 
       Email<h1>{userData.Email}</h1> */}
 {/* <b id="home"><Google></Google>SignOut</b> */}
-   <button onClick = {handleClick}>LOGIN</button>
+   <button className="Logbutton" onClick = {handleClick}>LOGIN</button>
    <button1 onClick = {logOut}>LOGIN</button1>
  
      </div>

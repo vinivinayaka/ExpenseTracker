@@ -112,39 +112,39 @@ const Login = () => {
     
     return (
         <div class="Container1">
-             <nav id="Nav">
-          <ul>
-            <li id="Expense"><Link to="/SignUp">Expense Tracker</Link></li>
+             <nav className="nav_items" id="Nav">
+          <ul className="navUl">
+            <li  id="Expense"><Link className='links_1' to="/SignUp">Expense Tracker</Link></li>
           </ul>
           </nav>
             <h1 id="SignUp">Sign Up for Expense Tracker <CircleUserRound /></h1>
             {/* <title>Sign Up</title> */}
            {/* <p id="tag"> it's quick and easy.</p> */}
-            <form onSubmit={handleSubmit}id="form">
+            <form className='loginForm' onSubmit={handleSubmit} id="form">
 
-                { <label for="UserName">Full Name</label> }
-                <input type="text" id="username" name="email" size="30px" placeholder="John Doe"autoComplete="off" onChange={(e) => setName(e.target.value)}></input>
+                { <label className='label_log' for="UserName">Full Name</label> }
+                <input className='inputs_data' type="text" id="username" name="email" size="30px" placeholder="John Doe"autoComplete="off" onChange={(e) => setName(e.target.value)}></input>
 
                 {/* <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder=''required onChange={(e) => setPassword(e.target.value)}></input> */}
-                <label for="confirmPassword">Password</label>
-                <input  type={passwordVisible ? 'text' : 'password'} id="confirmPassword" placeholder="Enter Your Password"name="email"required autoComplete="off" onChange={(e) => setConfirmPassword(e.target.value)}></input>
+                <label className='label_log' for="confirmPassword">Password</label>
+                <input className='inputs_data'  type={passwordVisible ? 'text' : 'password'} id="confirmPassword" placeholder="Enter Your Password" name="email"required autoComplete="off" onChange={(e) => setConfirmPassword(e.target.value)}></input>
                 <p className='eye'onPointerMove={togglePasswordVisibility}>
                     {passwordVisible ? <EyeOff /> : <Eye />}</p>
-                    <label for="password">Confirm Password</label>
-                    { <input type="password" id="password" name="password" placeholder='Enter Your Password'required onChange={(e) => setPassword(e.target.value)}></input> }
+                    <label className='label_log' for="password">Confirm Password</label>
+                    { <input className='inputs_data' type="password" id="password" name="password" placeholder='Enter Your Password'required onChange={(e) => setPassword(e.target.value)}></input> }
                 <div id="message" class="message"></div>
-                <label for="Email">Email Address</label>
-                <input type="email" id="email" name="email" size="30" placeholder="youremail@example.com"autoComplete="off" onChange={(e) => setEmail(e.target.value)}></input>
+                <label className='label_log' for="Email">Email Address</label>
+                <input className='inputs_data' type="email" id="email" name="email" size="30" placeholder="youremail@example.com"autoComplete="off" onChange={(e) => setEmail(e.target.value)}></input>
 
-                <label for="Mobile Number">MobileNumber</label>
-                <input type="number" id="mobileNumber"placeholder='Mobile Number' name="email" size="30" onChange={(e) => setMobileNumber(e.target.value)}></input>
-                <input type="checkbox" id="box" name="check" ></input>  
-                <label for="check" id="Findme">I agree to the Terms of  Service & Privacy Policy</label>
-                <button id="Button">Sign Up</button>
+                <label className='label_log' for="Mobile Number">MobileNumber</label>
+                <input className='inputs_data' type="number" id="mobileNumber"placeholder='Mobile Number' name="email" size="30" onChange={(e) => setMobileNumber(e.target.value)}></input>
+                <input className='inputs_data' type="checkbox" id="box" name="check" ></input>  
+                <label className='label_log' for="check" id="Findme">I agree to the Terms of  Service & Privacy Policy</label>
+                <button className="Logbutton" id="Button">Sign Up</button>
             </form>
             {/* <p>Already Have an Account</p> */}
-            <Link to="/" ><button id="Link">Login</button></Link>
+            <Link className='links_1' to="/" ><button className="Logbutton" id="Link">Login</button></Link>
            
 
         </div>

@@ -1,14 +1,15 @@
 import React, { useState ,useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
+// import Navbar from './components/Navbar';
 // import AddExpenseForm from './components/AddExpenseForm';
 import Budget from './components/Budget';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import RemainingBudget from './components/Remaining';
-import { Link } from 'react-router-dom';
+import { Link, Routes } from 'react-router-dom';
 // import Graph from './components/Graph';
-
+import Alert from './components/Alert';
     
 
 
@@ -20,10 +21,26 @@ const Content = () => {
     const addExpense = (expense) => {
         setExpenses([...expenses, expense]);
     };
+    const [alert, setAlert] = useState(null);
+
+    const showAlert = (message, type) => {
+      setAlert({
+        msg: message,
+        type: type
+      });
+    };
+  
+    setTimeout(() => {
+      setAlert(null);
+    }, 5000);
+  
 
     return (
         <>
-       
+               {/* <Navbar /> */}
+                
+               <Alert alert={alert} />
+
             <div className='container'>
                 <h1 className="text-4xl font-bold mb-3 mx-20 my-3">Good afternoon, Audrey</h1>
                 <p className="text-xl mb-8">Here's what's happening with your money</p>

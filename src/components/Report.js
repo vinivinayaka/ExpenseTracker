@@ -35,8 +35,9 @@ const Report = () => {
   };
 
   return (
-    <div className="container mt-4">
+    <>
           <Navbar />
+    <div className="container mt-4">
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -61,6 +62,7 @@ const Report = () => {
       </Table>
       {exportToCSV()}
     </div>
+    </>
   );
 };
 

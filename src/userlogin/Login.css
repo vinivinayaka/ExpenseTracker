@@ -1,6 +1,6 @@
 /* src/Login.css */
 
-.container {
+.containers_1 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,8 +12,8 @@
 }
 
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+.inputs_data::-webkit-outer-spin-button,
+.inputs_data::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
@@ -21,7 +21,7 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 
 
-form {
+.loginForm {
   width: 400px;
   /* padding: 150px; */
   margin-top: 120px;
@@ -31,12 +31,12 @@ form {
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  */
 }
 
-label {
+.label_log {
   display: block;
   margin-bottom: 8px;
 }
 
-input {
+.inputs_data {
   /* width: 100%;
   padding: 8px;
   margin-bottom: 16px;
@@ -51,10 +51,10 @@ input {
   border-style: none;
 }
 
-button {
+.Logbutton {
   width: 100%;
   padding: 10px;
-  /* background-color: black; */
+  /* background-color: red; */
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -95,7 +95,7 @@ button {
 }
 
 /* Style the label */
-label {
+.label_log {
   cursor: pointer;
   /* Make the label clickable */
   margin-left: 1px;
@@ -108,14 +108,10 @@ label {
   margin-left: 28px;
   color: #232323;
   font-weight: normal;
-  margin-top: 1px;
+  margin-top: -5px;
 }
 
-h1 {
-  margin-top: -360px;
-  position: absolute;
-  margin-left: 29px;
-}
+
 
 #icon {
   position: absolute;
@@ -179,14 +175,14 @@ h1 {
   text-decoration: none;
   list-style-type: none;
   margin-left: 187px;
-  margin-top: 123px;
+  margin-top: 70px;
   font-size: 12px;
   color: rgba(255, 0, 0, 0.685);
   font-style: italic;
   padding: 1px 5px;
 }
 
-p {
+.paragraph_log{
   margin-top: 10px;
   margin-left: 190px;
 }
@@ -209,7 +205,7 @@ p {
   margin-left: 702px;
 }
 
-input[type="email"] {
+.loginForm > input[type="email"] {
   width: 100%;
   padding: 12px 20px;
   margin-bottom: 16px;
@@ -219,7 +215,7 @@ input[type="email"] {
   background-color: #2323230e;
 }
 
-input[type="password"] {
+.loginForm > input[type="password"] {
   width: 100%;
   padding: 12px 20px;
   margin-bottom: 16px;
@@ -281,26 +277,26 @@ h3 {
   position: absolute;
 }
 
-nav {
+.nav_items {
   background-color: white;
   padding: 15px;
 
 }
 
-ul {
+.navUl{
   list-style-type: none;
   margin: 0;
   display: flex;
 
 }
 
-li {
+.listItem {
   margin-left: 190px;
   justify-content: start;
   margin-top: -28px;
 }
 
-a {
+.links_1 {
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -308,7 +304,7 @@ a {
   height: 0;
 }
 
-nav::after {
+.nav_items::after {
   content: "";
   position: absolute;
   left: 0;
@@ -392,7 +388,7 @@ nav::after {
   height: 448px;
 }
 
-input[type="number"] {
+.loginForm > input[type="number"] {
   width: 100%;
   padding: 12px 20px;
   margin-bottom: 16px;
@@ -404,7 +400,7 @@ input[type="number"] {
   -webkit-appearance: textfield; */
 }
 
-input[type="text"] {
+.loginForm > input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin-bottom: 16px;
@@ -497,13 +493,14 @@ input[type="text"] {
 }
 
 #Author {
-  margin-left: 309px;
-  position: absolute;
+  /* margin-left: 200px; */
+  /* position: absolute; */
   width: 85px;
-  /* padding: 18px 22px; */
+  padding: 18px 22px;
   background-color: red;
+  color: white;
   border-radius: 56px;
-  margin-top: -60px;
+  margin-top: 0;
 }
 
 /* #AdminHome {
@@ -520,7 +517,7 @@ input[type="text"] {
 
 .avatar {
   margin-left: -85px;
-  margin-top: -313px;
+  margin-top: -352px;
   position: absolute;
   height: -1%;
   width: 57px;
@@ -533,6 +530,7 @@ input[type="text"] {
 
 #SignIN {
   border: 1px solid black;
+  
 }
 
 #Update {
@@ -542,14 +540,6 @@ input[type="text"] {
   width: 400px;
   border-color: #232323;
 }
-
-/*   Update profile               */
-
-
-
-
-
-
 
 
 /* Login.css */
@@ -579,24 +569,24 @@ input[type="text"] {
   margin-bottom: 10%;
 }
 
-#bar1 {
+/* #bar1 {
   background-color: white;
   padding: 10px;
-}
+} */
 
-ul {
+.navUl {
   list-style-type: none;
   margin: 0;
   display: flex;
 }
 
-li {
+.listItem {
   margin-left: 10%;
   justify-content: start;
 }
 
 
-a {
+.links_1 {
   text-decoration: none;
   color: black;
   font-weight: 600;
@@ -605,7 +595,7 @@ a {
   position: absolute;
 }
 
-nav::after {
+.nav_items::after {
   content: "";
   position: absolute;
 
@@ -617,53 +607,53 @@ nav::after {
   margin-top: -10px;
 }
 
-.profile1 {
+/* .profile1 {
   font-weight: bolder;
-}
-
+} */
+/* 
 .profile {
   margin-top: -3px;
   align-items: center;
   justify-content: center;
   margin-left: 35%;
   line-height: 1.8;
-}
-
+} */
+/* 
 #BAR2 {
   margin-left: 1px;
   margin-top: -50px;
   line-height: 10px;
-  /* position: absolute; */
-}
+  position: absolute;
+} */
 
-#Bar3 {
+/* #Bar3 {
   margin-left: 1px;
   font-weight: 490;
   position: relative;
-  /* line-height: 12; */
-}
+  line-height: 12;
+} */
 
-.profile3,
+/* .profile3,
 .profile4 {
   margin-right: 50px;
-}
+} */
 
-.switch {
+/* .switch {
   position: absolute;
   display: inline-block;
   width: 35px;
   height: 19px;
   margin-left: 368px;
   margin-top: -35px;
-}
+} */
 
-.switch input {
+/* .switch > input {
   opacity: 0;
   width: 0;
   height: 0;
-}
+} */
 
-.slider {
+/* .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -674,9 +664,9 @@ nav::after {
   -webkit-transition: .4s;
   transition: .4s;
   margin-left: -6px;
-}
+} */
 
-.slider:before {
+/* .slider:before {
   position: absolute;
   content: "";
   height: 17px;
@@ -686,32 +676,32 @@ nav::after {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
-}
+} */
 
-input:checked+.slider {
+/* .inputs_data:checked+.slider {
   background-color: #2196F3;
-}
+} */
 
-input:focus+.slider {
+/* .inputs_data:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
-}
+} */
 
-input:checked+.slider:before {
+/* .inputs_data:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
+} */
 
 /* Rounded sliders */
-.slider.round {
+/* .slider.round {
   border-radius: 113px;
-}
+} */
 
-.slider.round:before {
+/* .slider.round:before {
   border-radius: 50%;
-}
+} */
 
-.switch1 {
+/* .switch1 {
   position: absolute;
   display: inline-block;
   width: 35px;
@@ -720,7 +710,7 @@ input:checked+.slider:before {
   margin-top: -35px;
 }
 
-.switch1 input {
+.switch1 > input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -735,13 +725,13 @@ input:checked+.slider:before {
   margin-top: -35px;
 }
 
-.switch2 input {
+.switch2 > input {
   opacity: 0;
   width: 0;
   height: 0;
-}
+} */
 
-.save1 {
+/* .save1 {
   margin-top: 89px;
   color: black;
   
@@ -752,16 +742,16 @@ input:checked+.slider:before {
   background-color: black !important;
   margin-top: 25px;
   margin-left: 73%;
-}
+} */
 
-#H2 {
-  /* width: 500px; */
+/* #H2 {
+  width: 500px;
   margin-top: 7px;
   margin-left: 0px;
 
-}
+} */
 
-#change {
+/* #change {
   width: 100px;
   padding: 7px;
   background-color: #e1e3e6;
@@ -774,11 +764,11 @@ input:checked+.slider:before {
   margin-top: -51px;
   margin-left: 314px;
   position: absolute;
-}
+} */
 
-#BAR4 {
+/* #BAR4 {
   margin-top: 5px;
-}
+} */
 #Expensers{
   text-decoration: none;
   color: black;
@@ -787,13 +777,13 @@ input:checked+.slider:before {
   margin-left: -689px;
   font-size: large;
 }
-#Save{
+/* #Save{
   background-color: #232323;
   margin-left: 50px;
   margin-top: 20px;
   position: absolute;
-}
-.Timer{
+} */
+/* .Timer{
 margin-top: 100px;
 position: absolute;
 margin-left: 1220px;
@@ -804,14 +794,14 @@ background-color: #232323;
 color: white;
 justify-content: center;
 width: 20px;
-}
+} */
 #Naviii{
- width: 100px;
- height: 100px;
+ width: 100%;
+ height: 50px;
 }
 #Expen{
-  margin-top: -90px;
+  /* margin-top: -90px; */
   font-weight: 1000px;
   font-size: medium;
-  margin-left: -650px;
+  /* margin-left: 650px; */
 }

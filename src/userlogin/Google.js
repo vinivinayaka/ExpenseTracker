@@ -54,12 +54,12 @@ catch(err){
     <div>
       <center>
         {user ?
-        <div>
-        
-       <Link to="/SignUp"><button onClick={()=>auth.signOut()} id="Author">LogOut</button></Link>
-        </div>
+          <div>
+          
+          <Link className='links_1' to="/SignUp"><button className="Logbutton" onClick={()=>auth.signOut()} id="Author">LogOut</button></Link>
+          </div>
          :
-      <Link to="/AdminHome" > <button onClick={signInWithGoogle}id="SignOut"></button></Link>
+      <Link className='links_1' to="/AdminHome" > <button className="Logbutton" onClick={signInWithGoogle} id="SignOut"></button></Link>
      
 }
       </center>

@@ -1,36 +1,62 @@
-import{Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { CircleUserRound} from 'lucide-react';
-// import "firebase/compat/auth";
-import Google from "../userlogin/Google";
-import Swal from "sweetalert2";
+import "firebase/compat/auth";
+import React ,{useState,useEffect}from 'react'
+import firebase from 'firebase/compat/app';
+import "firebase/compat/database";
+
+
+firebase.initializeApp({
+  apiKey: "AIzaSyCENZb60T9pfX7VuZlOve5F--fRGAOQTME",
+  authDomain: "project-5274c.firebaseapp.com",
+  projectId: "project-5274c",
+  storageBucket: "project-5274c.appspot.com",
+  messagingSenderId: "603112708268",
+  appId: "1:603112708268:web:cd0e909bc29ddd65a6a709",
+  measurementId: "G-ZQVP7N2YKV"
+
+})
+const auth = firebase.auth();
 
 export default function Navbar() {
-  const handleClick=()=>{
-    Swal.fire({
-        title: "Are you sure?",
-        text: "You won't be able to revert this!",
-        icon: "warning",
-        showCancelButton: true,
-        confirmButtonColor: "#3085d6",
-        cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, LOGOUT!"
-      }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire({
-            title: "Deleted!",
-            text: "Your file has been deleted.",
-            icon: "success"
-          });
-        }
-      });
-
-}
+  const [user,setUser]=useState(null);
+ 
+  useEffect(()=>{
+   auth.onAuthStateChanged(person=> {
+     if(person){
+       setUser(person);
+      
+     }
+     else{
+       
+       setUser(null);
+      
+      
+      
+     }
+   })
+  })
+//    const signInWithGoogle = async () => {
+//  try{
+//    await auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+//    alert("your Now Loggin")
+//  }
+ 
+//  catch(err){
+   
+//    console.log(err);
+  
+  
+    
+//  }
+//    }
+  
   return (
     <>
       <nav className="navbar">
         <h1 className="logo">Savvy Money</h1>
         <div className="menu">
-          <Link to="/" className="menu-link">Dashboard</Link>
+          <Link to="/Dashboard" className="menu-link">Dashboard</Link>
           <Link to="/Transactions" className="menu-link">Transactions</Link>
           <Link to="/Budgets" className="menu-link">Budgets</Link>
           <Link to="/Reports" className="menu-link">Reports</Link>
@@ -38,8 +64,17 @@ export default function Navbar() {
           <button aria-label="Help" className="menu-btn">
             <FileQuestionIcon className="menu-icon" />
           </button>
-          {/* <button onClick={handleClick}>LOGIN</button> */}
-          <Link to="/SignUp" onClick={handleClick}><Google></Google></Link> 
+          {user ?
+            <div>
+
+              <Link to="/SignUp"><button className="Logbutton bg-danger" onClick={() => auth.signOut()} >Logout</button></Link>
+            </div>
+            :
+            // <Link to="/AdminHome" > <button className="Logbutton" onClick={signInWithGoogle} ></button></Link>
+            ''
+
+          }
+          {/* <Link to="/SignUp" id="Author" className="Logbutton" onClick={handleClick}><Google></Google></Link>  */}
         </div>
       </nav>
     </>
