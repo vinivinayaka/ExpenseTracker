@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 // import Navbar from './components/Navbar';
@@ -10,7 +10,7 @@ import RemainingBudget from './components/Remaining';
 import { Link, Routes } from 'react-router-dom';
 // import Graph from './components/Graph';
 import Alert from './components/Alert';
-    
+
 
 
 const Content = () => {
@@ -23,30 +23,30 @@ const Content = () => {
     };
     const [alert, setAlert] = useState(null);
 
-    const showAlert = (message, type) => {
+    const showAlert = (messege, type) => {
       setAlert({
-        msg: message,
+        msg: messege,
         type: type
-      });
-    };
+      })
   
+    }
     setTimeout(() => {
       setAlert(null);
     }, 5000);
-  
+
 
     return (
         <>
-               {/* <Navbar /> */}
-                
-               <Alert alert={alert} />
+            {/* <Navbar /> */}
+
+            {/* <Alert alert={alert} /> */}
 
             <div className='container'>
                 <h1 className="text-4xl font-bold mb-3 mx-20 my-3">Good afternoon, Audrey</h1>
                 <p className="text-xl mb-8">Here's what's happening with your money</p>
                 <div className='row mt-3'>
                     <div className='col-sm'>
-                        <Budget />
+                        <Budget/>
                     </div>
                     <div className='col-sm'>
                         <RemainingBudget expenses={expenses} />
@@ -55,14 +55,16 @@ const Content = () => {
                         <ExpenseTotal expenses={expenses} />
                     </div>
                 </div>
-                <Link className="align-self-end btn btn-md btn-dark" to='/Budgets'>AddExpense</Link>
+                <div style={{ display: 'flex',justifyContent:"end" }}>
+                    <Link className="btn btn-md btn-dark" to='/Budgets'>AddExpense</Link>
+                </div>
                 <h3 className='mt-3'>Expenses</h3>
                 <div className='row '>
                     <div className='col-sm'>
                         <ExpenseList expenses={expenses} />
                     </div>
                 </div>
-                
+
                 {/* <div>
                     <Graph  />
                 </div> */}
@@ -73,7 +75,7 @@ const Content = () => {
                     </div>
                 </div> */}
             </div>
-        
+
         </>
     );
 };

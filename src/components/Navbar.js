@@ -61,18 +61,19 @@ export default function Navbar() {
           <Link to="/Budgets" className="menu-link">Budgets</Link>
           <Link to="/Reports" className="menu-link">Reports</Link>
           <Link to="/Settings" className="menu-link">Settings</Link>
+          
           <button aria-label="Help" className="menu-btn">
-            <FileQuestionIcon className="menu-icon" />
+          <Link to="/help" className="menu-link"> ⚙️</Link>
+          {/* <FileQuestionIcon className="menu-icon" /> */}
           </button>
           {user ?
             <div>
-
-              <Link to="/SignUp"><button className="Logbutton bg-danger" onClick={() => auth.signOut()} >Logout</button></Link>
+              <Link to="/"><button className="Logbutton bg-danger" onClick={() => auth.signOut()} >Logout</button></Link>
             </div>
             :
             // <Link to="/AdminHome" > <button className="Logbutton" onClick={signInWithGoogle} ></button></Link>
-            ''
-
+            <Link to="/"><button className="Logbutton bg-danger" onClick={() => auth.signOut()} >Logout</button></Link>
+            
           }
           {/* <Link to="/SignUp" id="Author" className="Logbutton" onClick={handleClick}><Google></Google></Link>  */}
         </div>

@@ -28,7 +28,7 @@ const Login = () => {
         console.log(res)
         if (res.data === "Success") {
           window.alert("YOUR ARE NOW LOGGED IN...!")
-          navigate('/')
+          navigate('/Dashboard')
         }
         else {
           window.alert("YOUR  DATA IS WRONG PLEASE TRY AGAIN")

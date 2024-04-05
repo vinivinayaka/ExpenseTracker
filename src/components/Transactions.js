@@ -40,7 +40,7 @@ const Transactions = () => {
                                 <Link to="/Settings" className="nav-link">⚙️ Settings</Link>
                             </li>
                             <li className="nav-item nav-item-bottom">
-                                <Link to="/help" className="nav-link">❓ Help</Link>
+                                <Link to="/Help" className="nav-link">❓ Help</Link>
                             </li>
                         </ul>
                     </div>
@@ -60,7 +60,7 @@ const Transactions = () => {
                                     key={transaction.id}
                                     name={transaction.name}
                                     date={transaction.date}
-                                    amount={`₹${transaction.cost}`}
+                                    amount={`₹ ${transaction.cost}`}
                                     imageSrc={categoryLogos[transaction.category]}
                                     alt={transaction.name}
                                 />
